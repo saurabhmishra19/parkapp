@@ -15,6 +15,16 @@ public class Employee {
 	 private String jobLevel;
 	 private String projectTag;
 
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	private String department;
+
 	public Boolean getActive() {
 		return isActive;
 	}
