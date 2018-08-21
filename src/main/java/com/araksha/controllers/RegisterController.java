@@ -1,5 +1,6 @@
 package com.araksha.controllers;
 
+import com.araksha.entity.EmployeeResponseDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,7 +16,7 @@ public class RegisterController {
 	EmployeeService employeeService;
 	
 	@PutMapping( value="/register/add")
-	public Employee register(@RequestBody Employee employee) {
+	public EmployeeResponseDto register(@RequestBody Employee employee) {
 		return employeeService.addUser(employee);
 	}
 }

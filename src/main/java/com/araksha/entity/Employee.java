@@ -8,12 +8,37 @@ public class Employee {
 
 	 private String empId;
 	 private String empName;
-	 private Integer mobileNumber;
+	 private String mobileNumber;
 	 private ParkType parkType;
 	 private Boolean isActive;
-	 private String dateRegistered;
-	 
-	
+	 private Long dateRegistered;
+	 private String jobLevel;
+	 private String projectTag;
+
+	public Boolean getActive() {
+		return isActive;
+	}
+
+	public void setActive(Boolean active) {
+		isActive = active;
+	}
+
+	public String getJobLevel() {
+		return jobLevel;
+	}
+
+	public void setJobLevel(String jobLevel) {
+		this.jobLevel = jobLevel;
+	}
+
+	public String getProjectTag() {
+		return projectTag;
+	}
+
+	public void setProjectTag(String projectTag) {
+		this.projectTag = projectTag;
+	}
+
 	public String getEmpId() {
 		return empId;
 	}
@@ -26,10 +51,10 @@ public class Employee {
 	public void setEmpName(String empName) {
 		this.empName = empName;
 	}
-	public Integer getMobileNumber() {
+	public String getMobileNumber() {
 		return mobileNumber;
 	}
-	public void setMobileNumber(Integer mobileNumber) {
+	public void setMobileNumber(String mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
 	
@@ -45,10 +70,10 @@ public class Employee {
 	public void setIsActive(Boolean isActive) {
 		this.isActive = isActive;
 	}
-	public String getDateRegistered() {
+	public Long getDateRegistered() {
 		return dateRegistered;
 	}
-	public void setDateRegistered(String dateRegistered) {
+	public void setDateRegistered(Long dateRegistered) {
 		this.dateRegistered = dateRegistered;
 	}
 	
