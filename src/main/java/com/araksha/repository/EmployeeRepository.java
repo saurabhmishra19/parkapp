@@ -18,4 +18,8 @@ public interface EmployeeRepository extends MongoRepository<Employee, String>{
 
 	@Query("{_id:'?0'}")
 	EmployeeResponseDto findBy_id(String _id);
+
+	List <EmployeeResponseDto> deleteByEmpId(String empId);
+//	ist <EmployeeResponseDto> deleteBy_id(String Id);
+
 }

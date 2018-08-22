@@ -7,9 +7,13 @@ import org.joda.time.DateTime;
  */
 public class CronJobConfig {
 
+
     private String timeToStart;
     private String frequency;
+    //deactivate for the day
     private boolean isActive;
+    //if false deactivate cron job for the day
+    private boolean isComing;
 
 
 }

@@ -18,9 +18,21 @@ public class LocationUpdateController {
 
     @PostMapping(value = "/locationUpdate")
     public LocationUpdaterServiceResponse updateLocation(@RequestBody EmployeeLocation empLocation) {
-        if (employeeService.getUserById(empLocation.getId()) != null) {
-           return  locationUpdateService.locationUpdater(empLocation);
+        // add field to update user confirmation
+
+        if(empLocation.isComing()) {
+            if (employeeService.getUserById(empLocation.getId()) != null) {
+                return locationUpdateService.locationUpdater(empLocation);
+            }
+        }else{
+            //update the db with user not coming and store in the andriod app not to invoke this service again
+
+
         }
         return null;
     }
+
+
+
+
 }

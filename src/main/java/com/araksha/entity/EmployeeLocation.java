@@ -11,6 +11,32 @@ public class EmployeeLocation {
     private long timeToReachOffice;
     private long currentDistanceInKms;
 
+    @Override
+    public String toString() {
+        return "EmployeeLocation{" +
+                "id='" + id + '\'' +
+                ", empId='" + empId + '\'' +
+                ", current=" + current +
+                ", lastUpdated=" + lastUpdated +
+                ", updateCount=" + updateCount +
+                ", isMovingToOffice=" + isMovingToOffice +
+                ", timeToReachOffice=" + timeToReachOffice +
+                ", currentDistanceInKms=" + currentDistanceInKms +
+                ", isComing=" + isComing +
+                '}';
+    }
+
+    public boolean isComing() {
+        return isComing;
+    }
+
+    public void setComing(boolean coming) {
+        isComing = coming;
+    }
+
+    private boolean isComing;
+
+
     public String getId() {
         return id;
     }
@@ -83,17 +109,4 @@ public class EmployeeLocation {
         this.currentDistanceInKms = currentDistanceInKms;
     }
 
-    @Override
-    public String toString() {
-        return "EmployeeLocation{" +
-                "id='" + id + '\'' +
-                ", empId='" + empId + '\'' +
-                ", current=" + current +
-                ", lastUpdated=" + lastUpdated +
-                ", updateCount=" + updateCount +
-                ", isMovingToOffice=" + isMovingToOffice +
-                ", timeToReachOffice=" + timeToReachOffice +
-                ", currentDistanceInKms=" + currentDistanceInKms +
-                '}';
-    }
 }

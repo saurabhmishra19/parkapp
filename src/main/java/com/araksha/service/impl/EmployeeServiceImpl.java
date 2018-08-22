@@ -45,5 +45,17 @@ public class EmployeeServiceImpl implements EmployeeService {
         EmployeeResponseDto emp= employeeRepository.findBy_id(uuid);
         return emp;
     }
+    @Override
+    public void deleteUserByEmpId(String empId){
+        employeeRepository.deleteByEmpId(empId);
+
+
+    }
+    @Override
+    public void deleteUser(String Id){
+        employeeRepository.deleteByEmpId(Id);
+
+
+    }
 
 }

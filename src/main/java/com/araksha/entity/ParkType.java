@@ -1,6 +1,6 @@
 package com.araksha.entity;
 
-enum ParkType {
+public enum ParkType {
 
     DEDICATED, FLOATTER
 
